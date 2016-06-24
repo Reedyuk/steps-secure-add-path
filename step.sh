@@ -5,6 +5,11 @@ if [ ! -n "$path" ]; then
   exit 1
 fi
 
+if [ ! -e "${path}" ]; then
+  print_failed_message "The specified already exists at: ${expanded_download_local_path}"
+  exit 0
+fi
+
 # this expansion is required for paths with ~
 #  more information: http://stackoverflow.com/questions/3963716/how-to-manually-expand-a-special-variable-ex-tilde-in-bash
 eval expanded_target_path="$path"
