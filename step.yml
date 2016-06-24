@@ -1,0 +1,39 @@
+title: Secure Add a given path
+summary: Add a folder. You can even use sudo to do so.
+description: |
+  Calls 'mkdir the-path' to securely add the given folder.
+website: https://github.com/Reedyuk/steps-secure-add-path
+source_code_url: https://github.com/Reedyuk/steps-secure-add-path
+support_url: https://github.com/Reedyuk/steps-secure-add-path/issues
+host_os_tags: []
+project_type_tags: []
+type_tags: []
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+dependencies: []
+run_if: ""
+inputs:
+  - path: ""
+    opts:
+      title: Folder path to add.
+      summary: ""
+      description: ""
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - with_sudo: "true"
+    opts:
+      title: |-
+        Use sudo for add? Options:
+          * true (default): use sudo
+          * false: don't use sudo
+      description: ""
+      summary: ""
+      value_options:
+        - "true"
+        - "false"
+      is_expand: false
+      is_required: false
+      is_dont_change_value: false
+outputs: []
