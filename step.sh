@@ -5,7 +5,7 @@ if [ ! -n "$path" ]; then
   exit 1
 fi
 
-if [ ! -e "${path}" ]; then
+if [ -e "${path}" ]; then
   print_failed_message "The specified already exists at: ${expanded_download_local_path}"
   exit 0
 fi
